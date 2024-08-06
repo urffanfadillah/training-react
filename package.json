@@ -11,14 +11,15 @@
     "prepare": "husky",
     "format": "prettier . --write"
   },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  },
-  "lint-staged": {
-    "*.css": ["stylelint --fix", "prettier --write"],
-    "*.{js,jsx}": ["eslint --fix", "prettier --write"],
-    "!(*.css|*.js|*.jsx)": ["prettier --write"]
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
